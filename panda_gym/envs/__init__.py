@@ -6,3 +6,7 @@ from panda_gym.envs.panda_tasks import (
     PandaSlideEnv,
     PandaStackEnv,
 )
+
+from panda_gym.envs.converging_tasks import (
+    ConvergingReachEnv
+)

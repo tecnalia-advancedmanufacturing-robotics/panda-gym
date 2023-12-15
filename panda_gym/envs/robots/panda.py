@@ -138,3 +138,15 @@ class Panda(PyBulletRobot):
     def get_ee_velocity(self) -> np.ndarray:
         """Returns the velocity of the end-effector as (vx, vy, vz)"""
         return self.get_link_velocity(self.ee_link)
+
+
+if __name__ == "__main__":
+    from panda_gym.pybullet import PyBullet
+
+    sim = PyBullet(render_mode="human")
+    robot = Panda(sim)
+
+    for _ in range(50):
+        robot.set_action(np.array([1.0]))
+        sim.step()
+        print(robot.get_obs())
