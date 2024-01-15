@@ -1,6 +1,6 @@
 import gymnasium as gym
 
-import panda_gym
+import nextage_gym
 
 env = gym.make("PandaReach-v3", render_mode="human")
 

@@ -11,7 +11,7 @@ To create your own robot, you will need its URDF file.
 Code
 ----
 
-To define your own task, you need to inherit from :py:class:`Task<panda_gym.envs.core.Task>`, and define the following 5 methods:
+To define your own task, you need to inherit from :py:class:`Task<nextage_gym.envs.core.Task>`, and define the following 5 methods:
 
 - ``reset()``: how the task is reset; you must define `self.goal` in this function
 - ``get_obs()``: returns the observation
@@ -19,14 +19,14 @@ To define your own task, you need to inherit from :py:class:`Task<panda_gym.envs
 - ``is_success(achieved_goal, desired_goal, info)``: returns whether the task is successfull
 - ``compute_reward(achieved_goal, desired_goal, info)``: returns the reward
 
-For the purpose of the example, let's consider here a very simple task, consisting in moving a cube toward a target position. The goal position is sampled within a volume of 10 m x 10 m x 10 m. 
+For the purpose of the example, let's consider here a very simple task, consisting in moving a cube toward a target position. The goal position is sampled within a volume of 10 m x 10 m x 10 m.
 
 .. code-block:: python
 
     import numpy as np
 
-    from panda_gym.envs.core import Task
-    from panda_gym.utils import distance
+    from nextage_gym.envs.core import Task
+    from nextage_gym.utils import distance
 
 
     class MyTask(Task):
@@ -60,7 +60,7 @@ For the purpose of the example, let's consider here a very simple task, consisti
         def compute_reward(self, achieved_goal, desired_goal, info={}):  # info is here for consistancy
             # for this example, reward = 1.0 if the task is successfull, 0.0 otherwise
             return self.is_success(achieved_goal, desired_goal, info).astype(np.float32)
-            
+
 
 
 Obviously, you have to adapt the example to your task.
@@ -72,7 +72,7 @@ The task is ready. To test it, execute the following code.
 
 .. code-block:: python
 
-    from panda_gym.pybullet import PyBullet
+    from nextage_gym.pybullet import PyBullet
 
     sim = PyBullet(render_mode="human")
     task = MyTask(sim)

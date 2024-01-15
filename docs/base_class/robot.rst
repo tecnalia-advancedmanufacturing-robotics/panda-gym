@@ -4,5 +4,5 @@ Robot
 =====
 
 
-.. autoclass:: panda_gym.envs.core.PyBulletRobot
+.. autoclass:: nextage_gym.envs.core.PyBulletRobot
     :members:

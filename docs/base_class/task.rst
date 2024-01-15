@@ -4,5 +4,5 @@ Task
 =====
 
 
-.. autoclass:: panda_gym.envs.core.Task
+.. autoclass:: nextage_gym.envs.core.Task
     :members:

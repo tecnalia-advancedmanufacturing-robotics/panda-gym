@@ -1,6 +1,6 @@
 import gymnasium as gym
 
-import panda_gym
+import nextage_gym
 
 
 def test_render():

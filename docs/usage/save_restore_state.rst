@@ -10,7 +10,7 @@ It is possible to save a state of the entire simulation environment. This is use
     import gymnasium as gym
     import numpy as np
 
-    import panda_gym
+    import nextage_gym
 
     env = gym.make("PandaReachDense-v3", render_mode="human")
     observation, _ = env.reset()

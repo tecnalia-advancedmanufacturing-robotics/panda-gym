@@ -3,7 +3,7 @@
 import gymnasium as gym
 from stable_baselines3 import DDPG, HerReplayBuffer
 
-import panda_gym
+import nextage_gym
 
 env = gym.make("PandaPush-v3")
 

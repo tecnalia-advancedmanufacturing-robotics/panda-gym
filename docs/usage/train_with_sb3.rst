@@ -21,7 +21,7 @@ Now that SB3 is installed, you can run the following code to train an agent. You
 .. code-block:: python
 
     import gymnasium as gym
-    import panda_gym
+    import nextage_gym
     from stable_baselines3 import DDPG
 
     env = gym.make("PandaReach-v2")
@@ -30,8 +30,8 @@ Now that SB3 is installed, you can run the following code to train an agent. You
 
 .. note::
 
-    Here we provide the canonical code for training with SB3. For any information on the setting of hyperparameters, verbosity, saving the model and more please read the `SB3 documentation <https://stable-baselines3.readthedocs.io/en/master/index.html>`_. 
- 
+    Here we provide the canonical code for training with SB3. For any information on the setting of hyperparameters, verbosity, saving the model and more please read the `SB3 documentation <https://stable-baselines3.readthedocs.io/en/master/index.html>`_.
+
 
 Bonus: Train with RL Baselines3 Zoo
 -----------------------------------
@@ -62,6 +62,6 @@ Enjoy
 
 To visualize the trained agent, follow the `instructions <https://stable-baselines3.readthedocs.io/en/master/guide/rl_zoo.html#enjoy-a-trained-agent>`_ in the SB3 documentation. It is necessary to add ``--env-kwargs render_mode:human`` when running the enjoy script.
 
-.. code-block:: bash 
+.. code-block:: bash
 
     python enjoy.py --algo <ALGO> --env <ENV> --folder <TRAIN_AGENT_FOLDER> --env-kwargs render_mode:human

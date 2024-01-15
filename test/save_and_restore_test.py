@@ -3,7 +3,7 @@ import numpy as np
 import pybullet
 import pytest
 
-import panda_gym
+import nextage_gym
 
 
 def test_save_and_restore_state():

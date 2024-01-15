@@ -43,7 +43,7 @@ The first step is to identify the joints you want to be able to control with the
 Joint forces
 ~~~~~~~~~~~~~
 
-For each joint, you must define a maximum force. This data is usually found in the technical specifications of the robot, and sometimes in the URDF file (``<limit effort="1.0"/>`` for a maximum effort of 1.0 Nm). Here, let's consider that the maximum effort is 1.0 Nm. 
+For each joint, you must define a maximum force. This data is usually found in the technical specifications of the robot, and sometimes in the URDF file (``<limit effort="1.0"/>`` for a maximum effort of 1.0 Nm). Here, let's consider that the maximum effort is 1.0 Nm.
 For the following, you will use ``joint_forces=np.array([1.0])``.
 
 ``set_action`` method
@@ -82,14 +82,14 @@ The ``reset`` method specify how to reset the robot. In the example, the robot r
 Full code
 ~~~~~~~~~
 
-You now have everything you need to define your custom robot. You only have to inherit the class :py:class:`PyBulletRobot<panda_gym.envs.core.PyBulletRobot>` in the following way.
+You now have everything you need to define your custom robot. You only have to inherit the class :py:class:`PyBulletRobot<nextage_gym.envs.core.PyBulletRobot>` in the following way.
 
 .. code-block:: python
 
     import numpy as np
     from gymnasium import spaces
 
-    from panda_gym.envs.core import PyBulletRobot
+    from nextage_gym.envs.core import PyBulletRobot
 
 
     class MyRobot(PyBulletRobot):
@@ -121,7 +121,7 @@ You now have everything you need to define your custom robot. You only have to i
 
 Obviously, you have to adapt the example to your robot, especially concerning the number and the indices of the joints, as well as the forces applied for the control.
 
-You can also use other types of control, using all the methods of the parent class :py:class:`PyBulletRobot<panda_gym.envs.core.PyBulletRobot>` and the simulation instance :py:class:`PyBullet<panda_gym.pybullet.PyBullet>`. For example for inverse kinematics you can use the method :py:meth:`PyBulletRobot.inverse_kinematics<panda_gym.envs.core.PyBulletRobot.inverse_kinematics>`.
+You can also use other types of control, using all the methods of the parent class :py:class:`PyBulletRobot<nextage_gym.envs.core.PyBulletRobot>` and the simulation instance :py:class:`PyBullet<nextage_gym.pybullet.PyBullet>`. For example for inverse kinematics you can use the method :py:meth:`PyBulletRobot.inverse_kinematics<nextage_gym.envs.core.PyBulletRobot.inverse_kinematics>`.
 
 Test it
 -------
@@ -130,7 +130,7 @@ The robot is ready. To see it move, execute the following code.
 
 .. code-block:: python
 
-    from panda_gym.pybullet import PyBullet
+    from nextage_gym.pybullet import PyBullet
 
     sim = PyBullet(render_mode="human")
     robot = MyRobot(sim)
@@ -139,4 +139,4 @@ The robot is ready. To see it move, execute the following code.
         robot.set_action(np.array([1.0]))
         sim.step()
 
-To see how to use this robot to define a new environment, see the :ref:`custom environment<custom_env>` section. 
+To see how to use this robot to define a new environment, see the :ref:`custom environment<custom_env>` section.

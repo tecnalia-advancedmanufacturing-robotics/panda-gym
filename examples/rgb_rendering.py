@@ -1,7 +1,7 @@
 import gymnasium as gym
 from numpngw import write_apng  # pip install numpngw
 
-import panda_gym
+import nextage_gym
 
 env = gym.make("PandaStack-v3", render_mode="rgb_array")
 images = []

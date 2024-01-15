@@ -4,5 +4,5 @@ Robot-Task
 ==========
 
 
-.. autoclass:: panda_gym.envs.core.RobotTaskEnv
+.. autoclass:: nextage_gym.envs.core.RobotTaskEnv
     :members:

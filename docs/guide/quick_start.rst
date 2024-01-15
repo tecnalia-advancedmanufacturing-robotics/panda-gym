@@ -8,7 +8,7 @@ Once ``panda-gym`` installed, you can start the "Reach" task by executing the fo
 .. code-block:: python
 
     import gymnasium as gym
-    import panda_gym
+    import nextage_gym
 
     env = gym.make('PandaReach-v3', render_mode="human")
 
@@ -20,6 +20,6 @@ Once ``panda-gym`` installed, you can start the "Reach" task by executing the fo
 
         if terminated or truncated:
             observation, info = env.reset()
-    
+
 
 Obviously, since the chosen actions are random, you will not see any learning. To access the section dedicated to the learning of the tasks, refer to the section :ref:`Train with stable-baselines3<train_with_sb3>`.

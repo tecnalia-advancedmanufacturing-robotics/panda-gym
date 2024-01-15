@@ -3,5 +3,5 @@
 Panda
 =====
 
-.. automodule:: panda_gym.envs.robots.panda
+.. automodule:: nextage_gym.envs.robots.panda
     :members:

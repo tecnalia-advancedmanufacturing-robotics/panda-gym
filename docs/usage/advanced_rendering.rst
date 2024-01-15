@@ -13,7 +13,7 @@ When it comes to renderers, there are two options: OpenGL and Tiny Renderer. The
 .. code-block:: python
 
     import gymnasium as gym
-    import panda_gym
+    import nextage_gym
 
     env = gym.make("PandaReach-v3", render_mode="rgb_array", renderer="OpenGL")
     env.reset()
@@ -53,7 +53,7 @@ Example
 .. code-block:: python
 
     import gymnasium as gym
-    import panda_gym
+    import nextage_gym
 
 
     env = gym.make(

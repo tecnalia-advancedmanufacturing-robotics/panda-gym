@@ -1,7 +1,7 @@
 import gymnasium as gym
 import pytest
 
-import panda_gym
+import nextage_gym
 
 
 def run_env(env):
@@ -17,7 +17,7 @@ def run_env(env):
     env.close()
 
 
-@pytest.mark.parametrize("env_id", panda_gym.ENV_IDS)
+@pytest.mark.parametrize("env_id", nextage_gym.ENV_IDS)
 def test_env(env_id):
     """Tests running panda gym envs."""
     env = gym.make(env_id)

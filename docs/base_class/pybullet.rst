@@ -4,5 +4,5 @@ PyBullet Class
 ==============
 
 
-.. automodule:: panda_gym.pybullet
+.. automodule:: nextage_gym.pybullet
     :members:
